@@ -6,7 +6,7 @@ import { AppContext } from '../context/AppContext';
 const Navbar = () => {
     const navigate = useNavigate();
 
-    const {user} = useContext(AppContext)
+    const {user, setShowLogin} = useContext(AppContext)
 
     const handleLogin = () => {
         // Add your login logic here
@@ -45,8 +45,8 @@ const Navbar = () => {
                 <div className='flex items-center gap-2 sm:gap-5'>
                     <p onClick={() => navigate('/credits')} className='cursor-pointer hover:text-gray-600 transition-colors'>Pricing</p>
                     <button 
-                        onClick={handleLogin}
-                        className='bg-zinc-800 text-white px-7 py-2 sm:px-10 text-sm rounded-full hover:bg-zinc-700 transition-colors'
+                        onClick={()=>setShowLogin(true)}
+                        className='bg-zinc-800 text-white px-7 py-2 sm:px-10 text-sm rounded-full hover:bg-zinc-700 transition-colors cursor-pointer'
                     >
                         Login
                     </button>
