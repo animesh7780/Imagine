@@ -2,17 +2,17 @@ import React from 'react'
 import Header from '../components/Header'
 import Steps from '../components/Steps'
 import Description from '../components/Description'
-import Testimonial from '../components/Testimonial'
-import GenerateButton from '../components/GenerateButton'
+import Testimonials from '../components/Testimonials'
+import GenerateBtn from '../components/GenerateBtn'
 
 const Home = () => {
   return (
     <div>
-      <Header/>
-      <Steps/>
-      <Description/>
-      <Testimonial/>
-      <GenerateButton/>
+      <Header />
+      <Steps />
+      <Description />
+      <Testimonials />
+      <GenerateBtn />
     </div>
   )
 }

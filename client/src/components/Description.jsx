@@ -1,27 +1,86 @@
 import React from 'react'
 import { assets } from '../assets/assets'
-import { motion } from 'motion/react'
+import { motion } from 'framer-motion'
 
-const Description = () => {
+function Description() {
   return (
-    <motion.div className='flex flex-col items-center justify-center my-24 p-6 md:px-28'
-      initial = {{opacity:0.2, y:100}}
-      transition={{duration:1}}
-      whileInView={{opacity:1, y:0}}
-      viewport={{once:true}}
+    <motion.div 
+      initial= {{opacity:0.2, y:100}} 
+      transition={{duration:1}} 
+      whileInView={{opacity:1, y:0}} 
+      viewport={{once:true}} 
+      className='flex flex-col items-center justify-center my-24 p-6 md:px-28'
     >
-      <h1 className='text-3xl sm:text-4xl font-semibold mb-2'>Create AI Images</h1>
-      <p className='text-gray-500 mb-8  '>Turn your imagination into reality, you imagine we create</p> 
+      <motion.h1 
+        className='text-4xl sm:text-5xl font-bold text-center mb-4 text-gray-900'
+        whileHover={{ 
+          color: '#4f46e5',
+          scale: 1.02
+        }}
+        transition={{ duration: 0.2 }}
+      >
+        Create AI Images
+      </motion.h1>
 
-      <div className='flex flex-col gap-5 md:gap-14 md:flex-row items-center'>
-        <img src={assets.sample_img_1} alt="" className='w-80 xl:w-96 rounded-lg ' />
-        <div>
-            <h2 className='text-3xl font-medium max-w-lg mb-4'>Introducig the most powerful Text to AI Image Generator, <span className='text-blue-600'>Imagine</span></h2>
-            <p className='text-gray-600 mb-4'>Easily Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor quaerat aspernatur ut nemo? Unde tenetur et, numquam labore ducimus autem cupiditate ab omnis ipsa placeat. Vel natus magnam earum. Voluptatum sint consequuntur dignissimos quaerat.</p>
-            <p className='text-gray-600'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro quia debitis iusto architecto nihil ducimus consequatur totam, odio esse rem aspernatur impedit aliquam corporis voluptatem rerum dolorem! Hic delectus ea dolorum doloribus, odit a veritatis.</p>
+      <motion.p 
+        className='text-xl text-gray-600 mb-16 text-center'
+        whileHover={{ 
+          color: '#9333ea',
+          scale: 1.02
+        }}
+        transition={{ duration: 0.2 }}
+      >
+        Turn your imagination into visuals
+      </motion.p>
+
+      <div className='flex flex-col gap-8 md:gap-14 md:flex-row items-start max-w-6xl mx-auto'>
+        <motion.div
+          className='w-full md:w-[45%] relative group'
+          whileHover={{ scale: 1.02 }}
+          transition={{ duration: 0.2 }}
+        >
+          <img 
+            src={assets.sample_img_1} 
+            alt="AI Generated Image" 
+            className='w-full h-auto rounded-lg shadow-lg relative z-10 max-w-md mx-auto'
+          />
+        </motion.div>
+
+        <div className='w-full md:w-[55%] space-y-6 md:pl-8'>
+          <motion.h2 
+            className='text-2xl md:text-3xl font-bold leading-tight text-gray-900'
+            whileHover={{ 
+              color: '#4f46e5',
+              scale: 1.01
+            }}
+            transition={{ duration: 0.2 }}
+          >
+            Introducing the AI-Powered text to Image Generator
+          </motion.h2>
+
+          <motion.p 
+            className='text-base md:text-lg text-gray-600 leading-relaxed'
+            whileHover={{ 
+              color: '#6366f1',
+              x: 10
+            }}
+            transition={{ duration: 0.2 }}
+          >
+            Easily bring your ideas to life with our free AI image generator. Whether you need stunning visuals or unique imagery, our tool transforms your text into eye-catching images with just a few clicks. Imagine it, describe it, and watch it come to life instantly.
+          </motion.p>
+
+          <motion.p 
+            className='text-base md:text-lg text-gray-600 leading-relaxed'
+            whileHover={{ 
+              color: '#6366f1',
+              x: 10
+            }}
+            transition={{ duration: 0.2 }}
+          >
+            Simply type in a text prompt, and our cutting-edge AI will generate high-quality images in seconds. From product visuals to character designs and portraits, even concepts that don't yet exist can be visualized effortlessly. Power by advanced AI technology, the creative possibilities are limitless!
+          </motion.p>
         </div>
       </div>
-
     </motion.div>
   )
 }

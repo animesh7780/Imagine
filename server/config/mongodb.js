@@ -1,13 +1,29 @@
-import mongoose from "mongoose"
- 
-const connectDB = async ()=>{
+import mongoose from "mongoose";
 
-    mongoose.connection.on('connected', ()=>{
-        console.log("Database Connected");
-        
-    })
+const connectDB = async () => {
+    try {
+        mongoose.connection.on('connected', () => {
+            console.log("MongoDB Connected Successfully");
+        });
 
-    await mongoose.connect(`${process.env.MONGODB_URI}/imagine`)
-}
+        mongoose.connection.on('error', (err) => {
+            console.error("MongoDB Connection Error:", err);
+        });
 
-export default connectDB
+        mongoose.connection.on('disconnected', () => {
+            console.log("MongoDB Disconnected");
+        });
+
+        await mongoose.connect(`${process.env.MONGODB_URI}/imagify`, {
+            useNewUrlParser: true,
+            useUnifiedTopology: true
+        });
+
+        console.log("MongoDB Connection Attempted");
+    } catch (error) {
+        console.error("MongoDB Connection Failed:", error);
+        process.exit(1);
+    }
+};
+
+export default connectDB;

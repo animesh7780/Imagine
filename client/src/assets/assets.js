@@ -18,6 +18,8 @@ import cross_icon from './cross_icon.svg'
 import star_group from './star_group.png'
 import credit_star from './credit_star.svg'
 import profile_icon from './profile_icon.png'
+import github_icon from './github_icon.svg'
+import linkedin_icon from './linkedin_icon.svg'
 
 export const assets = {
     logo,
@@ -34,7 +36,9 @@ export const assets = {
     cross_icon,
     star_group,
     credit_star,
-    profile_icon
+    profile_icon,
+    github_icon,
+    linkedin_icon
 }
 
 export const stepsData = [
@@ -57,45 +61,45 @@ export const stepsData = [
 
 export const testimonialsData = [
     {
-        image:profile_img_1,
-        name:'Donald Jackman',
-        role:'Graphic Designer',
-        stars:5,
-        text:`I've been using bg.removal for nearly two years, primarily for Instagram, and it has been incredibly user-friendly, making my work much easier.`
+        image: profile_img_1,
+        name: 'Sarah Chen',
+        role: 'Digital Artist',
+        stars: 5,
+        text: "Imagify has revolutionized my creative process. The AI understands artistic nuances and produces stunning results that align perfectly with my vision. A game-changer for digital artists!"
     },
     {
-        image:profile_img_2,
-        name:'Richard Nelson',
-        role:'Content Creator',
-        stars:5,
-        text:`I've been using bg.removal for nearly two years, primarily for Instagram, and it has been incredibly user-friendly, making my work much easier.`
+        image: profile_img_2,
+        name: 'Marcus Rodriguez',
+        role: 'Marketing Director',
+        stars: 5,
+        text: "We use Imagify daily for our marketing campaigns. The speed and quality of generated images are exceptional, saving us countless hours on content creation. Highly recommended!"
     },
     {
-        image:profile_img_1,
-        name:'Donald Jackman',
-        role:' Graphic Designer',
-        stars:5,
-        text:`I've been using bg.removal for nearly two years, primarily for Instagram, and it has been incredibly user-friendly, making my work much easier.`
+        image: profile_img_1,
+        name: 'Emily Parker',
+        role: 'UI/UX Designer',
+        stars: 5,
+        text: "The versatility of Imagify is incredible. From mockups to concept art, it helps me visualize designs quickly. The intuitive interface makes it a joy to use in my design workflow."
     },
 ]
 
 export const plans = [
     {
       id: 'Basic',
-      price: 10,
-      credits: 100,
+      price: 100,
+      credits: 50,
       desc: 'Best for personal use.'
     },
     {
       id: 'Advanced',
-      price: 50,
-      credits: 500,
+      price: 150,
+      credits: 80,
       desc: 'Best for business use.'
     },
     {
       id: 'Business',
-      price: 250,
-      credits: 5000,
+      price: 200,
+      credits: 120,
       desc: 'Best for enterprise use.'
     },
   ]
